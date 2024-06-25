@@ -10,7 +10,6 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "WeaponTypes.h"
 
-
 void AHitScanWeapon::Fire(const FVector& HitTarget)
 {
 	Super::Fire(HitTarget);

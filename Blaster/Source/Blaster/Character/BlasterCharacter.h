@@ -39,6 +39,10 @@ public:
 
 	void UpdateHUDHealth();
 	void UpdateHUDShield();
+	void UpdateHUDAmmo();
+	void UpdateHUDGrenade();
+
+	void SpawnDefaultWeapon();
 
 protected:
 	virtual void BeginPlay() override;
@@ -217,6 +221,14 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* AttachedGrenade;
 
+	/*
+	* Default weapon
+	*/
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AWeapon> DefaultWeaponClass;
+
+
 public:	
 	void SetOverlappingWeapon(AWeapon* Weapon);
 	bool IsWeaponEqipped();
@@ -241,4 +253,5 @@ public:
 	FORCEINLINE UAnimMontage* GetReloadMontage() const { return ReloadMontage; }
 	FORCEINLINE UStaticMeshComponent* GetAttachedGrenade() const { return AttachedGrenade; }
 	FORCEINLINE UBuffComponent* GetBuff() const { return Buff; }
+	bool IsLocallyReloading();
 };
