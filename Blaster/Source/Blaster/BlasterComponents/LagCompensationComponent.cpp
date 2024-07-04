@@ -7,7 +7,6 @@
 #include "Components/BoxComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Blaster/Blaster.h"
-
 #include "DrawDebugHelpers.h"
 
 ULagCompensationComponent::ULagCompensationComponent()
