@@ -243,6 +243,8 @@ private:
 
 	void UpdateHUDGrenades();
 
+	bool bHoldingTheFlag = false;
+
 public:	
 	FORCEINLINE int32 GetGrenades() const { return Grenades; }
 	FORCEINLINE int32 GetCarriedAmmo() const { return CarriedAmmo; }
