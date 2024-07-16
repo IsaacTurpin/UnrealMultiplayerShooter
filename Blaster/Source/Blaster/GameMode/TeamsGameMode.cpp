@@ -103,7 +103,7 @@ void ATeamsGameMode::PlayerEliminated(ABlasterCharacter* ElimmedCharacter, ABlas
 
 	ABlasterGameState* BGameState = Cast<ABlasterGameState>(UGameplayStatics::GetGameState(this));
 	ABlasterPlayerState* AttackerPlayerState = AttackerController ? Cast<ABlasterPlayerState>(AttackerController->PlayerState) : nullptr;
-	if (BGameState && AttackerPlayerState)
+	if (BGameState && AttackerPlayerState && VictimController != AttackerController)
 	{
 		if (AttackerPlayerState->GetTeam() == ETeam::ET_BlueTeam)
 		{
